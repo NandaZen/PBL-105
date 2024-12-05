@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 28, 2024 at 04:54 AM
+-- Generation Time: Nov 26, 2024 at 05:17 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -32,18 +32,16 @@ CREATE TABLE `pengguna` (
   `password` varchar(255) NOT NULL,
   `no_WA` varchar(15) DEFAULT NULL,
   `nama_pengguna` varchar(255) NOT NULL,
-  `role` enum('admin','staff gudang') NOT NULL,
-  `otp` varchar(50) DEFAULT NULL
+  `role` enum('admin','staff gudang') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `pengguna`
 --
 
-INSERT INTO `pengguna` (`email`, `password`, `no_WA`, `nama_pengguna`, `role`, `otp`) VALUES
-('juan@gmail.com', 'Juan123', NULL, 'Juan', 'staff gudang', NULL),
-('megah@gmail.com', 'Megah123', '08123456789', 'Megah', 'admin', NULL),
-('megahnandasp@gmail.com', 'Megah1234', '0812345679', 'Nanda', 'admin', NULL);
+INSERT INTO `pengguna` (`email`, `password`, `no_WA`, `nama_pengguna`, `role`) VALUES
+('budi@gmail.com', '$2y$10$ry4HO2z5qLtp2ywHuizZMOOccnkVRiw3haArw6UzE/YD3PcrjA/8C', '0812345678', 'Budi', 'admin'),
+('udin@gmail.com', '$2y$10$c6wXz3llHHNPEF43db/Ndu2K2/TptkMTvcov9OsNsKDtnJvcFLwSC', '', 'Udin', 'staff gudang');
 
 -- --------------------------------------------------------
 
@@ -85,13 +83,6 @@ CREATE TABLE `t_kategori` (
   `nama_kategori` varchar(255) NOT NULL,
   `nama_bahan_baku` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `t_kategori`
---
-
-INSERT INTO `t_kategori` (`id_kategori`, `nama_kategori`, `nama_bahan_baku`) VALUES
-('K002', 'Minuman', '');
 
 -- --------------------------------------------------------
 

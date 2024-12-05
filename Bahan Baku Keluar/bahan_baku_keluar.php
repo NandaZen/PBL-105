@@ -162,8 +162,6 @@ $result_table = mysqli_query($conn, $query_table);
         </div>
         </form>
 
-
-
         <div class="table-responsive">
             <table id="data-table" class="table table-bordered table-striped">
                 <thead>
@@ -210,12 +208,12 @@ $result_table = mysqli_query($conn, $query_table);
             changeMonth: true,
             changeYear: true,
             showButtonPanel: true,
-            yearRange: tahunTerlama + ":" + tahunTerbaru, // Batas tahun
+            yearRange: tahunTerlama + ":" + tahunTerbaru,
             onClose: function(dateText, inst) {
                 $(this).datepicker('setDate', new Date(inst.selectedYear, inst.selectedMonth, 1));
             }
         }).focus(function() {
-            $(".ui-datepicker-calendar").hide(); // Sembunyikan kalender tanggal
+            $(".ui-datepicker-calendar").hide(); 
         });
     });
     function openSidebar() {

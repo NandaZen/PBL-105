@@ -70,7 +70,7 @@ if (!in_array($_SESSION['role'], $allowed_roles)) {
         <ul>
             <li><a href="../Dasboard/dasboard.php">Beranda</a></li>
             <li><a href="../Kelola Bahan Baku/kelola_bahan.php"><i class="fa-solid fa-table-cells-large"></i> Kelola Stok Bahan Baku</a></li>
-            <li><a href="../Bahan Baku Masuk/bahan_baku_masuk.php"><i class="fa-solid fa-list-check"></i> Bahan Baku Masuk</a></li>
+            <li><a href="../Bahan Baku Masuk/bahan_masuk.php"><i class="fa-solid fa-list-check"></i> Bahan Baku Masuk</a></li>
             <li><a href="../Bahan Baku Keluar/bahan_baku_keluar.php"><i class="fa-regular fa-clipboard"></i> Bahan Baku Keluar</a></li>
             <li><a href="/Kategori/kategori.php"><i class="fa-sharp fa-thin fa-chart-simple"></i> Kategori Stok Bahan Baku</a></li>
             <div class="exit">

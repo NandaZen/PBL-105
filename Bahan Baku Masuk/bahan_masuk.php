@@ -191,7 +191,11 @@ $result_table = mysqli_query($conn, $query_table);
                         <td><?= htmlspecialchars($row['tanggal']); ?></td>
                         <td>
                             <button class="btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#editModal"><i class="fas fa-edit"></i></button>
-                            <button class="btn btn-light btn-sm" onclick="confirmAction(<?= $row['id']; ?>)"><i class="fa-regular fa-trash-can" style="color: #dd1d1d;"></i></button>
+                            <form method="POST" action="hapus.php" onsubmit="confirmAction(<?= $row['id']; ?>)">
+                              <input type="hidden" name="delete">
+                              <input type="hidden" value="<?= $row['id']; ?>" name="id">
+                            <button class="btn btn-light btn-sm" ><i class="fa-regular fa-trash-can" style="color: #dd1d1d;"></i></button>
+                            </form>
                         </td>
                     </tr>
                     <?php } ?>
